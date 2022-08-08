@@ -1,5 +1,5 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+	import { Meta, Story } from '@storybook/addon-svelte-csf';
 	import Energy from './Energy.svelte';
 </script>
 
@@ -10,7 +10,7 @@
 		type: {
 			control: { type: 'select' },
 			options: [
-                '',
+				'',
 				'colorless',
 				'darkness',
 				'dragon',
@@ -26,10 +26,22 @@
 		},
 		class: { control: 'text' }
 	}}
+	args={{
+		type: ''
+	}}
 />
 
-<Template let:args>
-	<Energy {...args} />
-</Template>
+<Story name="Default" let:args>
+	<Energy type={args.type} />
+</Story>
 
-<Story name="Default" args={{ type: '' }} />
+<Story name="Custom Size" let:args>
+	<Energy type={args.type} class="customEnergy" />
+</Story>
+
+<style global>
+	.customEnergy {
+		width: 128px;
+		height: 128px;
+	}
+</style>
