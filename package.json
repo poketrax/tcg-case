@@ -1,6 +1,6 @@
 {
   "name": "tcg-case",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -20,6 +20,7 @@
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-svelte-csf": "^2.0.6",
     "@storybook/builder-vite": "^0.2.2",
     "@storybook/svelte": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
@@ -33,23 +34,25 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.1",
     "eslint-plugin-svelte3": "^4.0.0",
+    "postcss-load-config": "^4.0.1",
     "prettier": "^2.6.2",
     "prettier-plugin-svelte": "^2.7.0",
     "svelte": "^3.49.0",
     "svelte-check": "^2.7.1",
     "svelte-loader": "^3.1.3",
     "svelte-preprocess": "^4.10.6",
+    "svelte2tsx": "^0.5.13",
     "tslib": "^2.3.1",
     "typescript": "^4.7.4",
-    "vite": "^3.0.4"
+    "vite": "^3.0.4",
+    "tailwindcss": "^3.1.7"
   },
   "type": "module",
   "dependencies": {
-    "@mdi/js": "^7.0.96",
-    "@storybook/addon-svelte-csf": "^2.0.6",
-    "postcss-load-config": "^4.0.1",
-    "svelte-materialify": "^0.3.11",
-    "svelte-materialize": "^0.0.0",
-    "tailwindcss": "^3.1.7"
+    "@mdi/js": "^7.0.96"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poketrax/tcg-case"
   }
 }

@@ -4,20 +4,22 @@
 	export let labelBG: string;
 	//Title for card case
 	export let title: string;
+	//Title Color
+	export let titleColor: string = "black"
 
 	let clazz = 'w-72 h-fit';
 	export { clazz as class };
 
 </script>
 
-<div id={`card-case${id}`} class="cardbox pt-4 pb-4 rounded-md {clazz}">
+<div id={`card-case${id}`} class="cardbox pt-4 pb-2 rounded-md {clazz}">
 	<!-- Title -->
 	<div class="h-16 mb-2 ml-4 mr-4 rounded-md" style="background-image: url({labelBG})">
 		<div class="w-64 h-16 rounded-md flex items-center">
 			<slot name="label1" />
 			<slot name="label2" />
 			<div class="pl-2 text-lg truncate" id="card-case-title">
-				<span>{title}</span>
+				<span style={`color:${titleColor}`}>{title}</span>
 			</div>
 			<div class="flex-grow" />
 			<slot name="label3" />
@@ -25,7 +27,15 @@
 		</div>
 	</div> 
 	<slot name="image" />
-	<slot name="footer" />
+	<div class="h-8 pl-4 pr-4 pt-2 flex justify-center items-center">
+		<slot name="footer1"/>
+		<span class="grow" />
+		<slot name="footer2"/>
+		<span class="grow" />
+		<slot name="footer3"/>
+		<span class="grow" />
+		<slot name="footer4"/>
+	</div>
 </div>
 
 <style>

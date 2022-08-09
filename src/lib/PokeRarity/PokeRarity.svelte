@@ -1,6 +1,5 @@
 <script lang="ts">
 	import promo from '../assets/promo.svg';
-	import { Buffer } from 'buffer';
 	import {
 		mdiStar,
 		mdiStarHalfFull,
@@ -10,11 +9,13 @@
 		mdiRhombus
 	} from '@mdi/js';
 
-	let klass = 'text-black h-6 w-6';
+	let klass = 'h-6 w-6';
+	export { klass as class };
 	export let rarity: string;
+	export let color: string = "black"
 
 	function getSrc(svg: string): string {
-		let data = Buffer.from(svg).toString('base64');
+		let data = btoa(svg)
 		return `data:image/svg+xml;base64,${data}`;
 	}
 </script>
@@ -24,8 +25,8 @@
 		<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 44 24" xmlns="http://www.w3.org/2000/svg">
-							<text y="21" style="font: 24px sans-serif;">H</text>
-							<path transform="translate(20, 0)" d="${mdiStar}" />
+							<text y="21" style="font: 24px sans-serif;fill: ${color};">H</text>
+							<path fill="${color}" transform="translate(20, 0)" d="${mdiStar}" />
 						</svg>`)}
 			alt={rarity}
 		/>
@@ -33,7 +34,7 @@
 		<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="${mdiCheckboxBlankCircle}" />
+							<path fill="${color}" d="${mdiCheckboxBlankCircle}" />
 						</svg>`)}
 			alt={rarity}
 		/>
@@ -41,7 +42,7 @@
 		<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="${mdiRhombus}" />
+							<path fill="${color}" d="${mdiRhombus}" />
 						</svg>`)}
 			alt={rarity}
 		/>
@@ -49,7 +50,7 @@
 		<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="${mdiStarHalfFull}" />
+							<path fill="${color}" d="${mdiStarHalfFull}" />
 						</svg>`)}
 			alt={rarity}
 		/>
@@ -57,7 +58,7 @@
 		<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="${mdiStarOutline}" />
+							<path fill="${color}" d="${mdiStarOutline}" />
 						</svg>`)}
 			alt={rarity}
 		/>
@@ -100,15 +101,15 @@
 			class="object-contain {klass}"
 			alt={rarity}
 			src={getSrc(`<svg viewBox="0 0 44 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="${mdiShimmer}" />
-							<path transform="translate(20, 0)" d="${mdiStar}" />
+							<path fill="${color}" d="${mdiShimmer}" />
+							<path fill="${color}" transform="translate(20, 0)" d="${mdiStar}" />
 						</svg>`)}
 		/>
 	{:else}
 		<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="${mdiStar}" />
+							<path fill="${color}" d="${mdiStar}" />
 						</svg>`)}
 			alt={rarity}
 		/>

@@ -3,7 +3,7 @@
 	export { klass as class };
 	export let grade: number;
 	export let grader: string;
-	export let modifier: string;
+	export let modifier: string = "";
 
 	let gradeClass: string;
 	let baseGradeClass = "border-2 rounded-md m-2 flex flex-col items-center"

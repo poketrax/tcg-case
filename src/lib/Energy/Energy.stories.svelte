@@ -35,8 +35,14 @@
 	<Energy type={args.type} />
 </Story>
 
-<Story name="Custom Size" let:args>
-	<Energy type={args.type} class="customEnergy" />
+<Story name="Custom Size">
+	<Energy type="fire" class="customEnergy" />
+	<style>
+		.customEnergy {
+			width: 128px;
+			height: 128px;
+		}
+	</style>
 </Story>
 
 <style global>

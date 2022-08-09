@@ -8,7 +8,16 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		package: {
+			exports: (filepath) => {
+			  return filepath.endsWith("index.ts");
+			},
+			files: (filepath) => {
+				
+			  return !filepath.endsWith(".test.ts") && !filepath.endsWith(".stories.svelte");
+			},
+		  },
 	}
 };
 
