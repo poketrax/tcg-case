@@ -27,5 +27,13 @@ module.exports = {
       postcss: true,
       sourceMap: true,
     }),
-  }
+  },
+  webpackFinal: async (config, { configType }) => {
+    config.output.publicPath = '/tcg-case/';
+    return config;
+  },
+  managerWebpack: async (config) => {
+    config.output.publicPath = '/tcg-case//';
+    return config;
+  },
 }
