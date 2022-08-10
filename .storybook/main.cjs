@@ -33,7 +33,7 @@ module.exports = {
     return config;
   },
   managerWebpack: async (config) => {
-    config.output.publicPath = '/tcg-case//';
+    config.output.publicPath = '/tcg-case/';
     return config;
   },
 }

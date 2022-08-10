@@ -12,7 +12,7 @@
     "lint": "prettier --check --plugin-search-dir=. . && eslint .",
     "format": "prettier --write --plugin-search-dir=. .",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build --preview-url=/tcg-case/iframe.html -o ./docs"
+    "build-storybook": "build-storybook -o ./docs"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
