@@ -27,10 +27,10 @@
 <Story name="Pokemon">
 	<CardCase labelBG={'static/fire-rev.png'} title={'Charizard'}>
 		<Energy type="fire" slot="label1" class="h-8 ml-2" />
-		<img slot="label3" alt="1st-ed" src="static/1st-edition.png" class="h-6 object-contain" />
+		<img slot="label3" alt="1st-ed" src="1st-edition.png" class="h-6 object-contain" />
 		<CardGradeStamp slot="label4" grade={10} grader={'BGS'} />
-		<CardImage slot="image" cardImg="static/charizard.jpeg" holofoil={true} id={1} />
-		<img slot="footer1" alt="set" src="static/1st-edition.png" class="h-4 m-2 object-contain" />
+		<CardImage slot="image" cardImg="charizard.jpeg" holofoil={true} id={1} />
+		<img slot="footer1" alt="set" src="1st-edition.png" class="h-4 m-2 object-contain" />
 		<Price slot="footer2" price={10000} paid={3000} />
 		<span slot="footer3">004</span>
 		<PokeRarity slot="footer4" rarity="Holo Rare" />
