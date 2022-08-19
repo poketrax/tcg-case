@@ -27,5 +27,9 @@
 </Template>
 
 <Story name="Default" args={{ cardImg: 'blacklotus.webp' }} />
-<Story name="Holo Foil" args={{ cardImg: 'bewd.webp', holofoil: true }} />
-<Story name="Overlay" args={{ cardImg: 'charizard.jpeg', overlay: 'static/fire-rev.png' }} />
+<Story name="Holo Foil" args={{ cardImg: 'bewd.webp', holofoil: true, class: "rounded-md" }} />
+<Story name="Overlay" args={{ cardImg: 'charizard.jpeg', overlay: 'static/fire-rev.png', class:"rounded-md" }} />
+
+<style>
+	.rounded-md{}
+</style>

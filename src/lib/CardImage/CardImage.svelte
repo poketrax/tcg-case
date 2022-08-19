@@ -7,9 +7,12 @@
 	export let cardImg: string;
 	export let opacity: number = 1;
 	export let holofoil: boolean = false;
-	export let overlay: string = "";
+	export let overlay: string = '';
 	export let width = '256px';
 	export let height = '360px';
+
+	let clazz = '';
+	export { clazz as class };
 
 	function onClick(event) {
 		dispatch('click', event);
@@ -52,10 +55,9 @@
 			</div>
 		</div>
 	{:then base64}
-		<div class="flex justify-center align-middle">
+		<div class="flex justify-center align-middle {clazz}">
 			<img
-				class={`rounded-xl cursor-pointer 
-				}`}
+				class={`cursor-pointer ${clazz}`}
 				style={`opacity: ${opacity ?? 1}; width: ${width}; height: ${height}`}
 				id={`card-img${id}`}
 				src={base64}
@@ -63,22 +65,22 @@
 				on:click={onClick}
 			/>
 			{#if overlay !== ''}
-				<div class="absolute rounded-md" style="width: {width}; height: {height}">
+				<div class="absolute {clazz}" style="width: {width}; height: {height}">
 					<img
-						class="flex items-center justify-center rounded-md"
+						class="flex items-center justify-center {clazz}"
 						style="width: {width}; height: {height}"
 						alt="holo-overlay"
 						src={overlay}
-						onClick={onClick}
+						{onClick}
 					/>
 				</div>
 			{/if}
 			{#if holofoil}
-				<div class="absolute rounded-md" style="width:{width}; height:{height}">
+				<div class="absolute {clazz}" style="width:{width}; height:{height}">
 					<div
-						class="flex items-center justify-center rounded-md opacity-30"
+						class="flex items-center justify-center opacity-30 {clazz}"
 						style="background:{rainbowHolo}; width:{width}; height:{height}"
-						onClick={onClick}
+						{onClick}
 					/>
 				</div>
 			{/if}
