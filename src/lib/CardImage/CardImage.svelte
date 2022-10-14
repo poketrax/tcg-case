@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
-
+	
 	export let id: number;
-
 	export let cardImg: string;
 	export let opacity: number = 1;
 	export let holofoil: boolean = false;
@@ -71,7 +70,7 @@
 						style="width: {width}; height: {height}"
 						alt="holo-overlay"
 						src={overlay}
-						{onClick}
+						on:click = {onClick}
 					/>
 				</div>
 			{/if}
@@ -80,7 +79,7 @@
 					<div
 						class="flex items-center justify-center opacity-30 {clazz}"
 						style="background:{rainbowHolo}; width:{width}; height:{height}"
-						{onClick}
+						on:click={onClick}
 					/>
 				</div>
 			{/if}
