@@ -1,11 +1,5 @@
 <script lang="ts">
 	import { beforeUpdate } from 'svelte';
-    import { SvelteComponentTyped } from "svelte";
-	interface PriceProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap['span']> {
-		price: number;
-		paid: number;
-	}
-	export class Price extends SvelteComponentTyped<PriceProps> {}
 
 	let klass = '';
 	export { klass as class };
