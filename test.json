@@ -1,0 +1,89 @@
+{
+    "configFile": false,
+    "root": "/Users/jgunzelman/Workspaces/poketrax/tcg-case",
+    "cacheDir": "node_modules/.vite-storybook",
+    "envPrefix": [
+     "VITE_",
+     "STORYBOOK_"
+    ],
+    "define": {},
+    "resolve": {},
+    "plugins": [
+     {
+      "name": "storybook-vite-code-generator-plugin",
+      "enforce": "pre"
+     },
+     [
+      {
+       "name": "storybook-vite-source-loader-plugin",
+       "enforce": "pre"
+      },
+      {
+       "name": "storybook-vite-source-loader-plugin-post",
+       "enforce": "post"
+      }
+     ],
+     {
+      "name": "storybook-vite-mdx-plugin",
+      "enforce": "pre"
+     },
+     {
+      "name": "no-fouc",
+      "enforce": "post"
+     },
+     {
+      "name": "storybook-vite-inject-export-order-plugin",
+      "enforce": "post"
+     },
+     [
+      {
+       "name": "vite:react-babel",
+       "enforce": "pre"
+      },
+      {
+       "name": "vite:react-refresh",
+       "enforce": "pre"
+      },
+      {
+       "name": "vite:react-jsx",
+       "enforce": "pre"
+      }
+     ],
+     {
+      "name": "vite-plugin-storybook-allow",
+      "enforce": "post"
+     },
+     [
+      {
+       "name": "vite-plugin-svelte",
+       "enforce": "pre",
+       "api": {}
+      },
+      {
+       "name": "vite-plugin-svelte:inspector",
+       "apply": "serve",
+       "enforce": "pre"
+      }
+     ],
+     {
+      "name": "vite-plugin-svelte-stories",
+      "enforce": "pre",
+      "api": {}
+     },
+     {
+      "name": "storybook-addon-svelte-csf",
+      "enforce": "post"
+     },
+     {
+      "name": "svelte-docgen"
+     }
+    ],
+    "build": {
+     "outDir": "/Users/jgunzelman/Workspaces/poketrax/tcg-case/docs",
+     "emptyOutDir": false,
+     "sourcemap": true
+    },
+    "esbuild": {
+     "keepNames": true
+    }
+   }
