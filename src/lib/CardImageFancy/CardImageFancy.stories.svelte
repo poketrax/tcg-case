@@ -17,6 +17,8 @@
 				'Pokemon-GO-Charizard-010.jpg'
 			]
 		},
+		height: { control: 'text' },
+		width: { control: 'text' },
 		holoEffect: {
 			control: { type: 'select' },
 			options: [
@@ -35,7 +37,6 @@
 				'rare holo vstar'
 			]
 		},
-		opacity: { control: { type: 'number', min: 0, max: 1, step: 0.1 } }
 	}}
 />
 
