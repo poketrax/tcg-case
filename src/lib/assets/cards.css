@@ -338,11 +338,7 @@
   }
   
   
-  /*
-  
-  V
-  
-  */
+  /* V */
   
   .card[data-rarity*="rare holo v"] .card__shine,
   .card[data-rarity*="rare holo v"] .card__shine:after {
@@ -398,11 +394,6 @@
   mix-blend-mode: soft-light;
   
   }
-  
-  
-  
-  
-  
   /*
   
   VMAX

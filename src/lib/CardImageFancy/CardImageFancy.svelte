@@ -495,7 +495,7 @@ const orientation = readable(getOrientationObject(), function start(set) {
 
 .card {
     --radius: 4.55% / 3.5%;
-    z-index: calc(var(--s) * 100);
+    z-index: calc(var(--s) * 80);
     transform: translate3d(0, 0, 0.1px);
     will-change: transform, visibility;
     transform-style: preserve-3d;

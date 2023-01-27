@@ -7,6 +7,7 @@
 	export let opacity: number = 1;
 	export let holofoil: boolean = false;
 	export let overlay: string = '';
+	export let overlay_mask: String = '';
 	export let width = '256px';
 	export let height = '360px';
 
@@ -67,7 +68,7 @@
 				<div class="absolute {clazz}" style="width: {width}; height: {height}">
 					<img
 						class="flex items-center justify-center {clazz}"
-						style="width: {width}; height: {height}"
+						style="width: {width}; height: {height}; {overlay_mask}"
 						alt="holo-overlay"
 						src={overlay}
 						on:click = {onClick}
