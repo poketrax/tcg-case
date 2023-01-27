@@ -7,7 +7,7 @@ module.exports = {
     if (configType === 'PRODUCTION') {
     
      console.log(JSON.stringify(config, null, 1))
-      //config.output.publicPath = "https://poketrax.github.io/tcg-case/";
+    //config.output.publicPath = "https://poketrax.github.io/tcg-case/";
     }
     return mergeConfig(config);
   },
