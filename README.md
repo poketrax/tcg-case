@@ -12,4 +12,4 @@ Storyboook: https://poketrax.github.io/tcg-case/
    * Asset
       * Energy
       * Poke Rarity
-      * Price   
+      * Price
