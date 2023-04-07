@@ -56,6 +56,7 @@
 		</div>
 	{:then base64}
 		<div class="flex justify-center align-middle {clazz}">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<img
 				class={`cursor-pointer ${clazz}`}
 				style={`opacity: ${opacity ?? 1}; width: ${width}; height: ${height}`}
@@ -66,6 +67,7 @@
 			/>
 			{#if overlay !== ''}
 				<div class="absolute {clazz}" style="width: {width}; height: {height}">
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<img
 						class="flex items-center justify-center {clazz}"
 						style="width: {width}; height: {height}; {overlay_mask}"
@@ -76,6 +78,7 @@
 				</div>
 			{/if}
 			{#if holofoil}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="absolute {clazz}" style="width:{width}; height:{height}">
 					<div
 						class="flex items-center justify-center opacity-30 {clazz}"

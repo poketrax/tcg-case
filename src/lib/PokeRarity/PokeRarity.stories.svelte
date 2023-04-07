@@ -18,7 +18,9 @@
 				'Secret Rare',
 				'Amazing Rare',
 				'Shiny Holo Rare',
-				'Promo'
+				'Promo',
+				'Double Rare',
+				'Hyper Rare'
 			]
 		},
 		class: { control: 'text' },

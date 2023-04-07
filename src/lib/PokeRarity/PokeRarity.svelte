@@ -21,6 +21,7 @@
 </script>
 
 <div class="flex items-center ">
+	<!-- svelte-ignore empty-block -->
 	{#if rarity === 'Holo Rare'}
 		<img
 			class="object-contain {klass}"
@@ -105,6 +106,33 @@
 							<path fill="${color}" transform="translate(20, 0)" d="${mdiStar}" />
 						</svg>`)}
 		/>
+	{:else if rarity === 'Double Rare'}
+	<img
+			class="object-contain {klass}"
+			src={getSrc(`<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+							<path fill="${color}" d="${mdiStar}" />
+							<g transform="translate(20 20)">
+								<path fill="${color}" d="${mdiStar}" />
+							</g>
+						</svg>`)}
+			alt={rarity}
+		/>
+	{:else if rarity === 'Hyper Rare'}
+		<img
+				class="object-contain {klass}"
+				src={getSrc(`<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+								<g transform="translate(12 0)">
+									<path fill="${color}" d="${mdiStar}" />
+								</g>
+								<g transform="translate(22 20)">
+									<path fill="${color}" d="${mdiStar}" />
+								</g>
+								<g transform="translate(3 20)">
+									<path fill="${color}" d="${mdiStar}" />
+								</g>
+							</svg>`)}
+				alt={rarity}
+			/>
 	{:else}
 		<img
 			class="object-contain {klass}"
