@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 	
-	export let id: number;
+	export let id: string;
 	export let cardImg: string;
 	export let opacity: number = 1;
 	export let holofoil: boolean = false;
@@ -59,7 +59,7 @@
 			<img
 				class={`cursor-pointer ${clazz}`}
 				style={`opacity: ${opacity ?? 1}; width: ${width}; height: ${height}`}
-				id={`card-img${id}`}
+				id={`${id}`}
 				src={base64}
 				alt="card-img${id}"
 				on:click={onClick}
