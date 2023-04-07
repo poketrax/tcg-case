@@ -1,5 +1,6 @@
 # tcg-case
 [![npm version](https://badge.fury.io/js/tcg-case.svg)](https://badge.fury.io/js/tcg-case)
+
 Svelte TCG UI component library
 
 Storyboook: https://poketrax.github.io/tcg-case/
