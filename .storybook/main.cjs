@@ -5,9 +5,7 @@ module.exports = {
   async viteFinal(config, { configType }) {
     // return the customized config
     if (configType === 'PRODUCTION') {
-    
-     console.log(JSON.stringify(config, null, 1))
-    //config.output.publicPath = "https://poketrax.github.io/tcg-case/";
+     return {...config, base: './'};
     }
     return mergeConfig(config);
   },
