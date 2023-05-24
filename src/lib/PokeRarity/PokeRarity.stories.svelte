@@ -42,6 +42,10 @@
 		<PokeRarity rarity="Rare" />
 		<PokeRarity rarity="Holo Rare" />
 		<PokeRarity rarity="Ultra Rare" />
+		<PokeRarity rarity="Double Rare" />
+		<PokeRarity rarity="Hyper Rare" />
+		<PokeRarity rarity="Illustration Rare" color="gold"/>
+		<PokeRarity rarity="Special Illustration Rare" color="gold" />
 		<PokeRarity rarity="Secret Rare" />
 		<PokeRarity rarity="Shiny Holo Rare" />
 		<PokeRarity rarity="Amazing Rare" />
