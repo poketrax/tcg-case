@@ -14,3 +14,11 @@ Storyboook: https://poketrax.github.io/tcg-case/
       * Energy
       * Poke Rarity
       * Price
+
+## Release Instructions
+   1. Build storybooks
+      ```sh
+      npm run build-storybook
+      ```
+   2. Update version in npm version
+   
