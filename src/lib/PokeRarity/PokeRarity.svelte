@@ -106,7 +106,7 @@
 							<path fill="${color}" transform="translate(20, 0)" d="${mdiStar}" />
 						</svg>`)}
 		/>
-	{:else if rarity === 'Double Rare'}
+	{:else if rarity === 'Double Rare' || rarity === 'Special Illustration Rare'}
 	<img
 			class="object-contain {klass}"
 			src={getSrc(`<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
